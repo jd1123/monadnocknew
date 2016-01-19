@@ -1,0 +1,30 @@
+{% load sekizai_tags %}
+{% load static %}
+{% addtoblock "css" %}
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'inc/css/normalize.css' %}">
+	<link rel="stylesheet" href="{% static 'inc/css/lightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'inc/css/animate.css' %}">
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="{% static 'inc/css/ie.css' %}" />
+	<![endif]-->
+	<link rel="stylesheet" href="{% static 'newcss/style.css' %}">
+		
+	<script src="{% static 'inc/js/modernizr.js' %}"></script><!-- update/customize build - delete comment -->
+		
+	<script src="{% static 'inc/js/conditionizr/conditionizr.js' %}"></script><!-- update to newest version + customize tests - delete comment -->
+	<script src="{% static 'inc/js/conditionizr/mac.js' %}"></script>
+	<script src="{% static 'inc/js/conditionizr/windows.js' %}"></script>
+	<script>
+		conditionizr.config({
+		    assets: '/assets/conditionizr/',
+		    tests: {
+			    'mac': ['class'],
+		        'windows': ['class']
+			}
+		});
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry&signed_in=true"></script>
+{% endaddtoblock %}

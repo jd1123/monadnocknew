@@ -1,0 +1,260 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+		<!--[if lt IE 8]>
+			<div class="no-support">
+				<p>Your browser is <strong>out of date</strong>!</p>
+				<p><a href="http://browsehappy.com/">Upgrade your browser</a> to view this website.</p>
+				<p style="font-size: small;">Using an outdated browser is not only unsafe but it prevents you from viewing webpages the way they were intended to be viewed. Only a handful of people on earth are still using your web browser; don't let technology leave you behind. <a href="http://browsehappy.com/">Upgrade</a> your browser today to something modern, capable and safe!</p>
+			</div>
+		<!--<![endif]-->
+		<div id="overlay">
+			<div class="overlay-content">
+				<img src="{% static 'inc/img/load-img.png' %}">
+				<div id="loader" class="animated fadeIn">
+					<div id="scrubber" class="scrubber"></div>
+				</div>
+			</div>
+		</div>
+		<header data-scroll-index="0">
+			<div id="no-js-message">This website works best with JavaScript enabled!</div>
+			<div class="screen"></div>
+			<nav class="mobile-nav">
+				<a class="mobile-logo cf" href="#"><i class="fa fa-cloud fa-2x" style="float: left;"></i><div class="mobile-logo-text">MONADNOCK<span>VAPOR</span></div></a>
+				<ul class="mobile-links">
+					<li><a data-scroll-goto="1">ABOUT</a></li>
+					<li><a data-scroll-goto="3">WHY MONADNOCK?</a></li>
+					<li><a data-scroll-goto="7">LOCATIONS</a></li>
+					<li><a data-scroll-goto="8">CONTACT</a></li>
+				</ul>
+			</nav>
+			<nav class="head-nav cf">
+				<a data-scroll-goto="1">ABOUT</a>
+				<a data-scroll-goto="3">WHY MONADNOCK?</a>
+				<a data-scroll-goto="7">LOCATIONS</a>
+				<a data-scroll-goto="8">CONTACT</a>
+			</nav>
+			<a href="#" class="logo"><i class="fa fa-cloud fa-2x" style="float: left;"></i><div style="float:left;margin-left: 5px;">MONADNOCK<span>VAPOR</span></div></a>
+			<a class="navicon navToggle"><span></span></a>
+			<section>
+				<h1>Monadnock Vapor</h1>
+				<p>
+					Why smoke when you can vape?	
+				</p>
+				<button data-scroll-goto="1">CHECK IT OUT<i class="fa fa-arrow-down"></i></button>
+			</section>
+		</header>
+		<section id="about" class="wp1" data-scroll-index="1">
+			<div class="container">
+				<h2>Welcome to Monadnock Vapor</h2>
+				<p>
+				{% placeholder "intro" %}
+				</p>
+				<p>
+				{% placeholder "news" %}
+				</p>
+				<p>
+				<a href="https://www.facebook.com/pages/Monadnock-Vapor/1455143341412596"><i class="fa fa-facebook fa-2x"></i></a>&nbsp&nbsp&nbsp
+				<a href="https://instagram.com/monadnock_vapor/"><i class="fa fa-instagram fa-2x"></i></a>&nbsp&nbsp&nbsp
+				<a href="http://www.yelp.com/biz_photos/monadnock-vapor-keene"><i class="fa fa-yelp fa-2x"></i></a>
+				<br />To get the latest news, goings-on and new product info, please check out our social media sites.
+				</p>
+			</div>
+		</section>
+		<section id="images" data-scroll-index="2">
+			<div class="image-row">
+				<ul id="image-gallery" class="cf">
+					<li>
+						<figure>
+							{% placeholder "img1" %}
+							<img src="{% static 'img/hats.jpg' %}">
+							<figcaption>
+								<a href="{% static 'img/hats.jpg' %}" class="image-gallery-link" data-lightbox="image-1" data-title="Monadnock threads">
+									<i class="fa fa-search-plus fa-3x"></i>
+									<p>Threads</p>
+								</a>	
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="{% static 'img/mechs.png' %}">
+							<figcaption>
+								<a href="{% static 'img/mechs.png' %}" class="image-gallery-link" data-lightbox="image-2" data-title="Mechs">
+									<i class="fa fa-search-plus fa-3x"></i>
+									<p>Mech Mods!</p>
+								</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="{% static 'img/westleb.png' %}" >
+							<figcaption>
+								<a href="{% static 'img/westleb.png' %}" class="image-gallery-link" data-lightbox="image-3" data-title="West Leb">
+									<i class="fa fa-search-plus fa-3x"></i>
+									<p>Our West Leb location</p>
+								</a>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+			<div class="image-row">
+				<ul id="image-gallery" class="cf">
+					<li>
+						<figure>
+							<img src="{% static 'img/squarevape.png' %}" >
+							<figcaption>
+								<a href="{% static 'img/squarevape.png' %}" class="image-gallery-link" data-lightbox="image-4" data-title="Square Vape">
+									<i class="fa fa-search-plus fa-3x"></i>
+									<p>Square Vape</p>
+								</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="{% static 'img/juicebar.png' %}">
+							<figcaption>
+								<a href="{% static 'img/juicebar.png' %}" class="image-gallery-link" data-lightbox="image-5" data-title="Keene Juice Bar">
+									<i class="fa fa-search-plus fa-3x"></i>
+									<p>Keene Juice Bar</p>
+								</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="{% static 'img/merch.png' %}">
+							<figcaption>
+								<a href="{% static 'img/merch.png' %}" class="image-gallery-link" data-lightbox="image-6" data-title="ISticks galore!">
+									<i class="fa fa-search-plus fa-3x"></i>
+									<p>ISticks</p>
+								</a>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="specials" class="wp2" data-scroll-index="3">
+			<div class="container">
+				<h2 class="wp2-1">{% placeholder "box-title" %}</h2>
+				<div id="dropdowns" class="cf">
+					<div class="dropdown wp2-2">
+						<div class="headline"><i class="fa fa-users"></i>{% placeholder "box1-title" %}</div>
+						<h4>{% placeholder "box1-sub-title" %}</h4>
+						<p>
+						Are you looking for a starter kit? We got you covered. Or are you into rebuildables on a 100-watt box? Yeah, we can help you out.
+						We carry a full selection of hardware and top shelf juices. 
+						</p>
+					</div>
+					<div class="dropdown wp2-3">
+						<div class="headline"><i class="fa fa-star-o"></i>Friendly Staff</div>
+						<h4>Come see our friendly staff.</h4>
+						<p>
+						Maybe you're like us and a seriously into vaping. Come on in and talk vapor with us.
+						Or maybe you're just getting into vaping and want to learn more. No problem, we will educate you on how to get started and stay off analogs.
+						We're dedicated to our customers. Please, ask around. 
+						</p>
+					</div>
+					<div class="dropdown wp2-4">
+						<div class="headline"><i class="fa fa-cogs"></i>Try before you buy</div>
+						<h4>Try all of our juices in the store.</h4>
+						<p>
+						Taste is a personal thing, and who are we to tell you what you like? Try all of our flavors in the store for free.
+						We're pretty certain you'll find something that suits you.
+						</p>
+					</div>
+				</div>
+				<button data-scroll-goto="0" class="cf wp2-5">BACK UP<i class="fa fa-arrow-up"></i></button>
+			</div>
+		</section>
+		<section id="map" class="wp3" data-scroll-index="7">
+				<div class="container cf">
+					<h2>LOCATIONS</h2>
+					<div class="tab-container">
+						<ul class="cf">
+							<li><a class="current tab1-input">Keene</a></li><!--
+							--><li><a class="tab2-input">West Lebanon</a></li>
+						</ul>
+					</div>
+					<div class="tab1-content">
+						<div class="left">
+							<i class="fa fa-map-marker fa-2x"></i>
+							<p>34 1/2 Washington Street</p>
+							<p>Keene, NH 03431</p>
+						</div>
+						<div class="right">
+							<i class="fa fa-clock-o fa-2x"></i>
+							<p>{% placeholder "monsat hours" %}</p>
+							<p>{% placeholder "sunhours" %}</p>
+						</div>
+					</div>
+					<div class="tab2-content">
+						<div class="left">
+							<i class="fa fa-map-marker fa-2x"></i>
+							<p>1 Glenn Road Plaza, Suite 19</p>
+							<p>West Lebanon, NH 03784</p>
+						</div>
+						<div class="right">
+							<i class="fa fa-clock-o fa-2x"></i>
+							<p>Monday - Saturday 11am - 7pm</p>
+							<p>Sunday 12pm - 5pm</p>
+						</div>
+					</div>
+				</div>
+			<div class="map-container">	
+				<div id="map-canvas"></div>
+				<div id="map-canvas2" class="tab-map-hide"></div>
+			</div>
+		</section>
+		<section id="contact" class="wp4" data-scroll-index="8">
+			<div class="container">
+				<h2>GET IN TOUCH</h2>
+				<a href="mailto:monadnockvapor@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+				<p>MONADNOCKVAPOR@GMAIL.COM</p>
+				<i class="fa fa-mobile fa-2x"></i>
+				<p>603 354 3168 - Keene</p>
+				<p>516 426 3395 - West Lebanon</p>
+				<br/>
+				<br/>
+				<button data-scroll-goto="0" class="cf wp2-5">BACK UP<i class="fa fa-arrow-up"></i></button>
+			</div>
+		</section>
+		<footer>
+			<div class="container cf">
+				<div id="footer-left">
+					<a href="https://www.facebook.com/pages/Monadnock-Vapor/1455143341412596"><i class="fa fa-facebook fa-2x"></i></a>
+					<a href="https://instagram.com/monadnock_vapor/"><i class="fa fa-instagram fa-2x"></i></a>
+					<a href="http://www.yelp.com/biz_photos/monadnock-vapor-keene"><i class="fa fa-yelp fa-2x"></i></a>
+				</div>
+				<div id="footer-right">
+					MONADNOCK VAPOR &copy; 2015<span>34 1/2 WASHINGTON ST, KEENE, NH 03431</span><span>(603) 354-3168 | Mon-Sat: 11-7 Sun. 12-5</span>
+				</div>
+			</div>
+		</footer>
+		<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  			ga('create', 'UA-54528251-1', 'auto');
+  			ga('send', 'pageview');
+
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="{% static 'inc/js/jquery-1.11.2.min.js' %}"><\/script>')</script>
+		<script src="{% static 'inc/js/jquery.waypoints.min.js' %}"></script>
+		<script src="{% static 'inc/js/scrollIt.min.js'%}"></script>
+		<script src="{% static 'inc/js/jquery.fitvids.js'%}"></script>
+		<script src="{% static 'inc/js/lightbox.min.js'%}"></script>
+		<script src="{% static 'inc/js/google-map.js'%}"></script>
+		<script src="{% static 'inc/js/scripts.js'%}"></script>
+{% endblock content %}
