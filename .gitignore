@@ -1,4 +1,5 @@
 settings.py
+settings.pyc
 project.db
 *.swp
 *.swo
