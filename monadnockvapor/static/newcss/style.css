@@ -1037,3 +1037,7 @@ footer a:nth-of-type(2) {
 
 .loading {
   overflow: auto; }
+
+.container {width: auto !important;}
+
+
